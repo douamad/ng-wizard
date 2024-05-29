@@ -7,8 +7,10 @@ import { NgWizardStepComponent } from './wizard-step/ng-wizard-step.component';
 import { NgWizardComponent } from './wizard/ng-wizard.component';
 import { NgWizardStepContentDirective } from './ng-wizard-step-content.directive';
 
+import {MatIconModule} from '@angular/material/icon';
+
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, MatIconModule],
   declarations: [NgWizardComponent, NgWizardStepComponent, NgWizardStepContentDirective],
   exports: [NgWizardComponent, NgWizardStepComponent]
 })
@@ -19,7 +21,7 @@ export class NgWizardModule {
    */
   static forRoot(ngWizardConfig: NgWizardConfig): ModuleWithProviders<NgWizardModule> {
     return {
-      ngModule: NgWizardModule,
+      ngModule: NgWizardModule,      
       providers: [
         {
           provide: NG_WIZARD_CONFIG_TOKEN,

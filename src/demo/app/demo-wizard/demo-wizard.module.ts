@@ -18,7 +18,7 @@ export const ROUTES: Routes = [{ path: '', component: DemoWizardComponent }];
 
 // wizard
 const ngWizardConfig: NgWizardConfig = {
-  theme: THEME.default
+  theme: THEME.circles
 };
 
 @NgModule({

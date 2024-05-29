@@ -19,7 +19,7 @@ export class DemoWizardComponent implements OnInit {
   stepDefinitions: StepDefinition[];
 
   stepStates = { normal: STEP_STATE.normal, disabled: STEP_STATE.disabled, error: STEP_STATE.error, hidden: STEP_STATE.hidden };
-  themes = [THEME.default, THEME.arrows, THEME.circles, THEME.dots];
+  themes = [THEME.circles, THEME.default, THEME.arrows, THEME.dots];
   stepIndexes = [0, 1, 2, 3, 4, 5, 6];
 
   selectedTheme: THEME;

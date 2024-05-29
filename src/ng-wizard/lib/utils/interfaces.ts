@@ -45,6 +45,10 @@ export abstract class NgWizardStep {
     index: number;
 
     @Input()
+    iconName: string;
+
+
+    @Input()
     title: string;
 
     @Input()

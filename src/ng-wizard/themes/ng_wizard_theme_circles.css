@@ -76,7 +76,7 @@
 
 .ng-wizard-theme-circles>ul.step-anchor>li>a>small {
   position: relative;
-  bottom: -40px;
+  bottom: -20px;
   color: #ccc;
 }
 
@@ -93,6 +93,8 @@
 .ng-wizard-theme-circles>ul.step-anchor>li.active>a>small {
   color: #5bc0de;
 }
+
+
 
 .ng-wizard-theme-circles>ul.step-anchor>li.done>a {
   border-color: #5cb85c;

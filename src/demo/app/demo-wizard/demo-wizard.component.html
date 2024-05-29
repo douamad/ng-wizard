@@ -2,16 +2,18 @@
 <div class="container">
   <div class="form-group">
     <ng-wizard [config]="config" (stepChanged)="stepChanged($event)">
-      <ng-wizard-step *ngFor="let stepDefinition of stepDefinitions" [title]="stepDefinition.title"
+      <ng-wizard-step *ngFor="let stepDefinition of stepDefinitions"
+        [iconName]="stepDefinition.iconName"
+        [title]="stepDefinition.title"
         [description]="stepDefinition.description" [state]="stepDefinition.state" [component]="stepDefinition.component"
         [canEnter]="stepDefinition.canEnter" [canExit]="stepDefinition.canExit">
       </ng-wizard-step>
 
-      <ng-wizard-step [title]="'Step 6'" [description]="'Step 6 description'" [state]="stepStates.error">
+      <ng-wizard-step [iconName]="'favorite'" [title]="'Step 6'" [description]="'Step 6 description'" [state]="stepStates.error">
         <app-step-six></app-step-six>
       </ng-wizard-step>
 
-      <ng-wizard-step [title]="'Step 7'" [description]="'Step 7 description'">
+      <ng-wizard-step [iconName]="'done'" [title]="'Step 7'" [description]="'Step 7 description'">
         <span>Step 7 content</span>
       </ng-wizard-step>
     </ng-wizard>

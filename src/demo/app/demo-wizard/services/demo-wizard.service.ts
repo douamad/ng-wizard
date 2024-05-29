@@ -29,6 +29,7 @@ export class DemoWizardService {
 
   stepDefinitions: StepDefinition[] = [
     {
+      iconName: 'upload',
       title: 'Step 1',
       description: 'Step 1 description',
       component: StepOneComponent,
@@ -36,12 +37,14 @@ export class DemoWizardService {
       canExit: this.validateStep.bind(this, 'exit'),
     },
     {
+      iconName:'library_books',
       title: 'Step 2',
       description: 'Step 2 description',
       state: STEP_STATE.disabled,
       component: StepTwoComponent,
     },
     {
+      iconName:'photo_filter',
       title: 'Step 3',
       description: 'Step 3 description',
       component: StepThreeComponent,
@@ -91,6 +94,7 @@ export class DemoWizardService {
 }
 
 export interface StepDefinition {
+  iconName?:string;
   title: string;
   description: string;
   state?: STEP_STATE;

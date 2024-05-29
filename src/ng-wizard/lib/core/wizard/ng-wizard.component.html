@@ -1,8 +1,12 @@
 <div id="ngwizard" [ngClass]="styles.main">
     <ul class="nav nav-tabs step-anchor">
         <li *ngFor="let step of steps; let i = index" [ngClass]="_getStepCssClass(step)">
+           
             <a href="#step-{{ i }}" (click)="_showSelectedStep($event, step)" *ngIf="!step.isHidden"
-                class="nav-link">{{ step.title }}<br /><small>{{ step.description }}</small></a>
+                class="nav-link">
+                <span> <mat-icon >{{step.iconName}}</mat-icon></span>
+                <span *ngIf="!step.iconName"> {{step.title}}</span>  <br />
+                <small>{{ step.description }}</small></a>
         </li>
     </ul>
 
@@ -19,9 +23,16 @@
                 [ngClass]="button.class" type="button" (click)="_extraButtonClicked(button)">{{ button.text }}</button>
         </div>
     </div>
-
-    <div class="ng-wizard-container tab-content">
-        <ng-content></ng-content>
+    <div class="card">
+        <div class="card-header">
+             <span>{{this.currentStep?.title}}</span>   
+             <div class="float-right">Step {{this.currentStep?.index+1}} of {{this.steps.length}}</div>
+        </div>
+    <div class="card-body">
+        <div class="ng-wizard-container tab-content">
+            <ng-content ></ng-content>
+        </div>
+    </div>
     </div>
 
     <div *ngIf="showToolbarBottom" [ngClass]="styles.toolbarBottom">
