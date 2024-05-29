@@ -144,7 +144,7 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
+          "options": {            
             "tsConfig": "src/ng-wizard/tsconfig.lib.json",
             "project": "src/ng-wizard/ng-package.json"
           },
