@@ -54,15 +54,15 @@ export class NgWizardDataService {
   }
 
   resetWizard() {
-    this._resetWizard.next();
+    this._resetWizard.next(""); // sending an empty string to trigger the event
   }
 
   showNextStep() {
-    this._showNextStep.next();
+    this._showNextStep.next(""); // sending an empty string to trigger the event
   }
 
   showPreviousStep() {
-    this._showPreviousStep.next();
+    this._showPreviousStep.next(""); // sending an empty string to trigger the event
   }
 
   showStep(index: number) {

@@ -312,7 +312,7 @@ export class NgWizardComponent implements OnDestroy, AfterContentInit {
       let direction = this._getStepDirection(selectedStep.index);
       let result = condition({ direction: direction, fromStep: this.currentStep, toStep: selectedStep });
 
-      if (isObservable<boolean>(result)) {
+      if (isObservable(result)) {
         return result;
       }
       else if (typeof result === typeof true) {

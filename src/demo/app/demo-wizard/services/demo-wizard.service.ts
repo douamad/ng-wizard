@@ -80,7 +80,7 @@ export class DemoWizardService {
         stepSpecificValidateMethod = stepSpecificValidateMethod.bind(step.componentRef.instance);
         let result = stepSpecificValidateMethod();
 
-        if (isObservable<boolean>(result)) {
+        if (isObservable(result)) {
           return result;
         }
         else if (typeof result === typeof true) {
